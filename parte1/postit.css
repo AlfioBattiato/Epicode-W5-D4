@@ -1,0 +1,108 @@
+body {
+  background-color: #666666;
+  font-family: "Indie Flower";
+  padding: 4rem 4rem;
+}
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+}
+h2 {
+  font-size: 24px;
+  margin: 0.5rem;
+}
+.container-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+  
+  .container-card div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    width: 12rem;
+    box-shadow: 5px 5px 6px -1px rgba(0, 0, 0, 0.61);
+    animation: entry 1s;
+    animation-fill-mode: backwards;
+  }
+  
+  .green {
+    background: rgb(162, 187, 164);
+    background: linear-gradient(
+      0deg,
+      rgba(162, 187, 164, 1) 0%,
+      rgba(189, 229, 192, 1) 77%,
+      rgba(205, 255, 207, 1) 100%
+    );
+    transform: rotate(4deg);
+  }
+  
+  .purple {
+    background: rgb(139, 140, 155);
+    background: linear-gradient(
+      0deg,
+      rgba(139, 140, 155, 1) 0%,
+      rgba(202, 202, 250, 1) 77%,
+      rgba(202, 202, 250, 1) 100%
+    );
+    transform: rotate(-6deg);
+  }
+  
+  .yellow {
+    background: rgb(175, 175, 139);
+    background: linear-gradient(
+      0deg,
+      rgba(175, 175, 139, 1) 0%,
+      rgba(246, 246, 196, 1) 77%,
+      rgba(246, 246, 196, 1) 100%
+    );
+    transform: rotate(-4deg);
+  }
+  
+  .green, .purple, .yellow {
+    transition: transform 1s, scale 1s;
+  }
+  
+  .container-card div:hover {
+    transform: rotate(0deg) scale(1.4);
+    z-index: 2;
+  }
+.container-card div:nth-of-type(1) {
+  animation-delay: 1s;
+}
+.container-card div:nth-of-type(2) {
+  animation-delay: 1.3s;
+}
+.container-card div:nth-of-type(3) {
+  animation-delay: 1.6s;
+}
+.container-card div:nth-of-type(4) {
+  animation-delay: 1.9s;
+}
+.container-card div:nth-of-type(5) {
+  animation-delay: 2.2s;
+}
+
+.container-card div:nth-of-type(6) {
+  animation-delay: 2.5s;
+}
+.container-card div:nth-of-type(7) {
+  animation-delay: 2.8s;
+}
+.container-card div:nth-of-type(8) {
+  animation-delay: 3.1s;
+}
+
+@keyframes entry {
+  from {
+    transform: scale(5);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
